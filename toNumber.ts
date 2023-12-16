@@ -61,12 +61,12 @@ export const toNumber = function (wordToConvert: string) {
             return number;
         }
 
-        if (index === 1 && numberParts.length > 2) {
+        if (index === 1 && numberParts.length > 2 || index === 1 && numberParts[0] === 1) {
             return total * number;
         }
 
         return total + number;
-    } , 0);
+    }, 0);
 
     return sumNumberParts;
 
