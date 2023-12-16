@@ -26,6 +26,7 @@ describe('.toNumber() function tests', () => {
         "etthundra": 100, "etthundraett": 101, "etthundratvå": 102, "etthundratre": 103, "etthundrafyra": 104,
         "etthundrafem": 105, "etthundrasex": 106, "etthundrasju": 107, "etthundraåtta": 108, "etthundranio": 109,
         "tvåhundranittiosju": 297, "trehundrafemtiosex": 356, "fyrahundrasextiofem": 465, "femhundrasjuttiofyra": 574,
+        "sexhundraåttiotre": 683, "sjuhundranittio": 790, "åttahundranittionio": 899, "niohundranittionio": 999,
     };
 
     Object.entries(numbersInSwedish).forEach(([word, number]) => {
@@ -33,20 +34,5 @@ describe('.toNumber() function tests', () => {
             expect(toNumber(word)).toBe(number);
         });
     });
-
-    // Exempel för mer komplexa tal
-    test('should convert "femtiosju" to 57', () => {
-        expect(toNumber("femtiosju")).toBe(57);
-    });
-
-    // Exempel för mer komplexa tal
-    test('should convert "etthundrafemtiosex" to 156', () => {
-        expect(toNumber("etthundrafemtiosex")).toBe(156);
-    });
-
-    test('should convert "niohundranittionio" to 999', () => {
-        expect(toNumber("niohundranittionio")).toBe(999);
-    });
-
     // Lägg till fler tester här för att täcka upp till 1000
 });
