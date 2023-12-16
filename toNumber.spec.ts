@@ -27,6 +27,7 @@ describe('.toNumber() function tests', () => {
         "etthundrafem": 105, "etthundrasex": 106, "etthundrasju": 107, "etthundraåtta": 108, "etthundranio": 109,
         "tvåhundranittiosju": 297, "trehundrafemtiosex": 356, "fyrahundrasextiofem": 465, "femhundrasjuttiofyra": 574,
         "sexhundraåttiotre": 683, "sjuhundranittio": 790, "åttahundranittionio": 899, "niohundranittionio": 999,
+        "sextioelva": 71, "etttusen": 1000, "etttusenetthundra": 1100, "etttusenetthundratvå": 1102, "etttusenetthundratretton": 1113
     };
 
     Object.entries(numbersInSwedish).forEach(([word, number]) => {
@@ -34,5 +35,7 @@ describe('.toNumber() function tests', () => {
             expect(toNumber(word)).toBe(number);
         });
     });
+
+    expect(toNumber("pippilångstrump")).toBeNaN();
     // Lägg till fler tester här för att täcka upp till 1000
 });
